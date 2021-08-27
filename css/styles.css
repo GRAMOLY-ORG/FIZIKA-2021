@@ -1,0 +1,848 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvenirNextIt";
+  src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  height: 100vh;
+  width: 10vw;
+  z-index: 1000;
+  background-image: linear-gradient(#ebebebb0, #ebebebf0);
+  border-right: 2px #21212120 solid;
+  border-radius: 2rem;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a:visited,
+a:active,
+a:hover,
+a:link {
+  all: unset;
+}
+
+nav li {
+  transform: rotate(-90deg);
+  width: auto;
+  color: #212121;
+  font-family: "AvenirNextRegular";
+  font-size: 1.2rem;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #ebebeb;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  /* position: fixed;
+  background-color: #ebebeb;
+  background-size: cover;
+  background-position: 50% 50%; */
+  position: fixed;
+  background-color: #ebebeb;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.fab {
+  color: #ebebeb;
+}
+
+.fas {
+  font-size: 7px;
+}
+
+.img-cont {
+  position: absolute;
+  background-image: linear-gradient(#ebebebb0, #ebebebf0);
+  border: 2px #21212120 solid;
+  border-radius: 2rem;
+  top: 35vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 45vh;
+  z-index: 1000;
+}
+
+button {
+  color: #fe644e;
+  border: solid 4px #fe644e;
+  font-family: "AvenirTextRegular";
+  width: 15rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 70vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 2.5rem;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: #fe644e;
+  color: #ebebeb;
+  border: none;
+  font-family: "AvenirTextRegular";
+  width: 16.5rem;
+  height: 5.5rem;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 70vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 2.75rem;
+  cursor: pointer;
+}
+
+.main-hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #ebebeb;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  z-index: 100;
+}
+@media only screen and (max-width: 430px) {
+  .logo {
+    height: 65%;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.timeline {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content h1 {
+  font-family: "AvenirNextBold";
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-family: "AvenirNextRegular";
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 2080px) {
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+}
+
+.org-txt {
+  color: #fe644e;
+  padding-bottom: 30px;
+  padding-left: 17px;
+  font-family: "AvenirNextBold";
+}
+
+.con-txt {
+  color: #fe644e;
+  padding-bottom: 30px;
+  padding-left: 17px;
+  font-family: "AvenirNextBold";
+  padding-top: 40px;
+}
+
+.maker-hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.maker-list {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.maker-list ul {
+  list-style: none;
+}
+
+.maker-list ul li {
+  padding: 15px;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.maker-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.maker-name p {
+  font-family: "AvenirNextBold";
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.maker-heading {
+  color: #fe644e;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  font-size: 25px;
+  font-family: "AvenirNextBold";
+}
+
+.prize-hero {
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.prize-list ul {
+  list-style: none;
+}
+
+.prize-list ul li {
+  padding: 15px;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.prize-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.prize-txt p {
+  font-family: "AvenirNextBold";
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.prize-heading {
+  color: #fe644e;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  font-size: 25px;
+  font-family: "AvenirNextBold";
+}
+
+.prize-list {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ebebeb;
+}
+
+.about-list {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  min-width: 100px;
+}
+
+.about-list ul {
+  list-style: none;
+}
+
+.about-list ul li {
+  padding: 3rem 2rem;
+  background-image: linear-gradient(135deg, #212121e0, #212121e9);
+  border: solid 4px #212121;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.about-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.about-list p {
+  font-family: "AvenirNextRegular";
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.about-list h1 {
+  font-family: "AvenirNextBold";
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.about-what {
+  color: #fe644e;
+  padding: 4rem;
+  font-size: 25px;
+  font-family: "AvenirNextBold";
+}
+
+.about-txt h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* .about-what h1 {
+  font-size: 5rem;
+} */
+
+.timeline-content a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+.timeline-content a:hover {
+  color: #fe644e;
+}
+
+.sponsors-hero {
+  /* min-height: 100vh; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.sponsors-list {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sponsors-list ul {
+  list-style: none;
+}
+
+.sponsors-list ul li {
+  padding: 20px;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sponsors-txt a:hover {
+  color: #fe644e;
+}
+
+.sponsors-txt h1 {
+  font-family: "AvenirNextBold";
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.sponsors-heading {
+  color: #fe644e;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  font-size: 25px;
+  font-family: "AvenirNextBold";
+}
+
+.sponsors-txt svg:hover {
+  fill: #fe644e;
+}
+
+.sponsors-txt svg:hover polygon {
+  fill: #fe644e;
+}
+
+.sponsors-txt svg:hover path {
+  fill: #fe644e;
+}
+
+.aops-logo {
+  height: 125px;
+  width: 350px;
+}
+
+@media only screen and (max-width: 710px) {
+  .aops-logo {
+    height: 105px;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .sponsors-txt h1 {
+    font-size: 20px;
+  }
+
+  .aops-logo {
+    height: 95px;
+    width: 275px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .aops-logo {
+    height: 80px;
+    width: 225px;
+  }
+
+  .sponsors-txt h1 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .aops-logo {
+    height: 70px;
+    width: 210px;
+  }
+}
+.aops-logo:hover {
+  cursor: pointer;
+}
+.cha-logo:hover {
+  cursor: pointer;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 70vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 34px;
+  height: 30vh;
+  z-index: 100;
+}
+
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  background-color: #ebebeb;
+  border: 4px solid #fe644e;
+  border-radius: 25px;
+  box-sizing: content-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.scroller {
+  width: 4px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fe644e;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+.sponsors-txt a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+.math-span {
+  text-align: center;
+  justify-content: center;
+  font-size: 46px;
+  padding: 10px;
+  color: #ebebeb;
+}
+
+.math-span:hover {
+  color: #fe644e;
+  cursor: pointer;
+}
+
+.timeline-content h1 {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  nav {
+    display: none;
+  }
+}
+
+.nav-href:hover {
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  cursor: pointer;
+}
+
+.phy-repl-logo:hover {
+  cursor: pointer;
+}
+
+/*--------------------timer-------------*/
+.timer {
+  font-family: "Roboto";
+  width: 550px;
+  /* height: 30px; */
+  margin: auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 550px) {
+  .timer {
+    width: 350px;
+  }
+}
+
+.timer .flipdown {
+  margin: auto;
+  text-align: center;
+}
+
+.timer h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.timer .flipdown h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fe644e;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.flipdown.flipdown__theme-dark .rotor-group-heading:before {
+  color: #fff;
+}
+
+.rotor-group-heading {
+  margin-bottom: 10px;
+}
+
+.flipdown.flipdown__theme-dark .rotor-bottom,
+.flipdown.flipdown__theme-dark .rotor-leaf-rear {
+  color: #000;
+  background-color: #fff;
+}
+
+.flipdown.flipdown__theme-dark .rotor,
+.flipdown.flipdown__theme-dark .rotor-top,
+.flipdown.flipdown__theme-dark .rotor-leaf-front {
+  color: #000;
+  background-color: #fff;
+}
+
+.flipdown.flipdown__theme-dark
+  .rotor-group:nth-child(n + 2):nth-child(-n + 3):before,
+.flipdown.flipdown__theme-dark
+  .rotor-group:nth-child(n + 2):nth-child(-n + 3):after {
+  background-color: #fff;
+}
