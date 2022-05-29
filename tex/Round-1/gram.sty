@@ -1,0 +1,548 @@
+  %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   %         %%%%%%%%%%%%%%%%%%%%%  Packages   %%%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    
+    \ProvidesPackage{gram}
+    \usepackage[T1]{fontenc}
+    %4.22
+    \usepackage[english]{babel}             
+    \usepackage[utf8]{inputenc}
+    \usepackage[top=3cm,headheight=3cm,headsep=1cm,bottom=2.5cm,left=1.5cm,right=1.5cm]{geometry}
+    \usepackage{amsthm, amssymb, amsmath}
+    \usepackage{tikz,lipsum,lmodern}   
+    \usepackage{color,pxfonts,fix-cm}
+    \usepackage{latexsym}
+    \usepackage{physics}                    
+    \usepackage{cancel}           
+    \usepackage{varwidth}
+    \usepackage{pict2e}
+    \usepackage{wasysym}
+    \usepackage{fontawesome}
+    \usepackage{paralist}
+    \usepackage{mathpazo}
+    \usepackage{csquotes}
+    \usepackage{parskip}
+    \usepackage{epigraph}
+    \usepackage{ulem}
+\usepackage[useregional]{datetime2}
+\usepackage{circuitikz}
+ %Date and Time
+
+    \usepackage{rotating}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    
+    \fancyhead[C]{\monts\Large\color{black}\@title}
+    \fancyhead[L]{\monts\large\color{gramdark}{\@author}}
+    \fancyhead[R]{\monts\large\color{gramdark}{\@date}}
+    \fancyfoot[R]{\monts\Large\thepage}
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \usepackage{wrapfig}
+    \usepackage{relsize} 
+    
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %         %%%%%%%%%%%%%%%%%%%%%    Colors   %%%%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    \usepackage{color}
+    \usepackage{xcolor}
+    
+    
+    \definecolor{fizikawhite}{HTML}{ededed}
+    \definecolor{fizikaorange}{HTML}{fe644e}    
+    \definecolor{fizikablack}{HTML}{212121}    
+    \definecolor{gramdarkblue}{HTML}{022B3A}
+    \definecolor{gramblue}{HTML}{1F7A8C}
+    \definecolor{grambeblue}{HTML}{BFDBF7}
+    \definecolor{gramlightblue}{HTML}{73FCEA}
+    \definecolor{gramsky}{HTML}{54C1FF}
+    \definecolor{gramyellow}{HTML}{fdca40}
+    \definecolor{gramorange}{HTML}{f79824}
+    %\definecolor{grampink}{HTML}{FF5A5F}
+    %\definecolor{grampink}{HTML}{573280}
+    %\definecolor{grampink}{HTML}{FCAB64}
+    %\definecolor{grampink}{HTML}{6A0F49}
+    %\definecolor{grampink}{HTML}{96031A}
+    %\definecolor{grampink}{HTML}{F46036}
+    \definecolor{grampink}{HTML}{B118C8}
+    
+    \definecolor{grammagenta}{HTML}{F90093}
+    \definecolor{gramdark}{HTML}{1b1b3a}
+    \definecolor{gramgreen}{HTML}{40f99b}
+    \definecolor{gramwhite}{HTML}{ffffff}
+    \definecolor{gramred}{HTML}{f6644e}
+    \definecolor{gramlime}{HTML}{E0FF4F}
+    \definecolor{grampeach}{HTML}{FF6666}
+    \definecolor{gramclaret}{HTML}{820933}
+    \definecolor{grampurple}{HTML}{5603AD}
+    \definecolor{gramyellow}{HTML}{F0C808}
+    
+    \definecolor{myblue}{HTML}{36c5e5}
+    \definecolor{myblue2}{HTML}{4c99ee}
+    
+    %%%% Footnote %%%%%
+\renewcommand{\thempfootnote}{\ \textcolor{grammagenta}{\arabic{mpfootnote}}}
+
+\renewcommand\thefootnote{\ \textcolor{grammagenta}{\arabic{footnote}}}
+
+
+
+    \usepackage{footnote}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{tcolorbox}{\savenotes}
+\AfterEndEnvironment{tcolorbox}{\spewnotes}
+\BeforeBeginEnvironment{theorem}{\savenotes}
+\AfterEndEnvironment{theorem}{\spewnotes}
+\BeforeBeginEnvironment{notebox}{\savenotes}
+\AfterEndEnvironment{notebox}{\spewnotes}
+\BeforeBeginEnvironment{definition}{\savenotes}
+\AfterEndEnvironment{definition}{\spewnotes}
+\BeforeBeginEnvironment{example}{\savenotes}
+\AfterEndEnvironment{example}{\spewnotes}
+\BeforeBeginEnvironment{solution}{\savenotes}
+\AfterEndEnvironment{solution}{\spewnotes}
+
+
+
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    %%%%%%%%%%%%%%%%%%%%%    Font   %%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    %\usepackage{bitter}
+    %\usepackage{roboto}
+    %\usepackage{cabin}
+    \newcommand{\monts}{\fontfamily{Montserrat-TOsF}\selectfont}
+    \newcommand{\bitter}{\fontfamily{bitter}\selectfont}
+    \newcommand{\roboto}{\fontfamily{roboto}\selectfont}
+    \newcommand{\cabin}{\fontfamily{cabin}\selectfont}
+    \newcommand{\texgyrebonum}{\fontfamily{texgyrebonum}\selectfont}
+    \newcommand{\LibreBodoni}{\fontfamily{LibreBodoni}\selectfont}
+    
+    %\usepackage{bookman}
+    \newcommand{\bookman}{\fontfamily{bookman}\selectfont}
+    
+    %\usepackage{GoMono}
+    \newcommand{\GoMono}{\fontfamily{GoMono}\selectfont}
+    
+    %Go Mono Font
+    %\usepackage{merriweather} 
+    \newcommand{\merriweather}{\fontfamily{merriweather}\selectfont}
+    
+    %\usepackage{merriweather}
+    
+    %%%%%%%%%%%%%%%%%%%% Section Formatting %%%%%%%%%%%%%%
+    %\usepackage{titlesec}
+    
+    %\newlength\titleindent
+    %\setlength\titleindent{1cm}
+    
+    
+    
+    \renewcommand*{\sectionformat}%
+    				{\normalfont\Huge{{\S}\thesection{.}}\enskip}
+    			\renewcommand*{\subsectionformat}%
+    				{\normalfont\Large{{\S}\thesubsection{.}}\enskip}
+    			\renewcommand*{\subsubsectionformat}%
+    				{\normalfont\large{{\S}\thesubsubsection{.}}\enskip}
+    
+    
+    
+    %\titleformat{\section}
+    %  {\LibreBodoni\huge\bfseries}{\thesection.\enspace}{0em}{}
+    %\titleformat{\subsection}
+    %  {\LibreBodoni\Large\bfseries}{\thesubsection.\enspace}{0em}{}
+    %\titleformat{\subsubsection}
+    %  {\LibreBodoni\large\bfseries}{\thesubsubsection.\enspace}{0em}{}
+    
+    
+    
+    
+    
+    
+    %%%%%%%%%% Title and Author %%%%%%%%%%%%%%%%%
+    
+    
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+    
+    \makeatletter% since there's an at-sign (@) in the command name
+    \renewcommand{\@maketitle}{%
+      \parindent=0pt% don't indent paragraphs in the title block
+      \centering
+      {\huge \monts \bfseries{\@title}}
+      \HRule\par%
+      \Large\monts{\@author \hfill \@date}
+      \par
+      }
+    \makeatother% resets the meaning of the at-sign (@)
+    
+    %%%%%  commands  %%%%%
+    
+    
+     \renewcommand{\labelitemi}{$\faAngleDoubleRight$}
+     \renewcommand{\labelitemii}{$\faAngleRight$}
+     \renewcommand{\labelitemiii}{$\faAngleRight$}
+     \renewcommand{\labelitemiv}{$\faAngleRight$}
+     
+     \newcommand{\vocab}[1]{\textbf{\large\color{grammagenta!80!white}\underline{#1}}}
+    \definecolor{radicalred}{HTML}{FF355E}
+    
+    
+    
+
+%%%%%%%%%%%     Calculus Shortcuts      %%%%%%%%%%
+
+%\newcommand{\del}[2]{\frac{\partial{#1}}{\partial{#2}}}
+%\newcommand{\dydx}[2]{$\frac{\mathrm{d}{#1}{\mathrm{d}{#2}}$}
+
+
+
+
+
+
+
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    %%%%%%%%%%%%%%%%%%%%%    Hyperref   %%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    \usepackage{blindtext}
+    \usepackage{hyperref}
+    \RequirePackage{hyperref}
+    \makeatletter
+    \AtBeginDocument{
+    \hypersetup{
+        linkcolor=radicalred,
+        filecolor=radicalred,      
+        urlcolor=radicalred,
+        citecolor = radicalred,
+        anchorcolor = radicalred,
+        pdftitle={\@title},
+        pdfauthor={\@author},
+        }}
+    \makeatother
+    \urlstyle{same}
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%     TOC     %%%%%%%%%%%%%%%%%%%%
+    
+    
+    
+    \protected\def\tableofcontents{\begin{toc}\monts\csname@starttoc\endcsname{toc}\end{toc}}
+    
+    
+    \renewcommand{\contentsname}{}
+    
+    %%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %         %%%%%%%%%%%%%%%%%%%%%    Boxes   %%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    \usepackage[many]{tcolorbox}
+    \tcbuselibrary{theorems}
+    \tcbuselibrary{skins,xparse,minted,listings}
+    \tcbuselibrary{breakable} % Use this in every box 
+    \usetikzlibrary{shadows}
+    
+    %%%%%%%%%%%%            theorem              %%%%%%%%%%%%        
+    \newtcolorbox[auto counter, number within=section]{theorem}[2][]{%
+            enhanced,
+            interior style={middle color=gramlightblue!60!white,
+                            right color=gramlightblue!30!white,
+                            left color=gramlightblue!30!white
+            },
+            colframe=gramlightblue!70!black,
+            colbacktitle=gramlightblue!75!white,
+            top=6mm,
+            bottom=6mm,
+            right=6mm,
+            left=6mm,
+            breakable,
+            attach boxed title to top left={xshift=5mm,yshift=-1.5mm},
+            title=  \monts\large{Theorem~\thetcbcounter:}~\normalsize{#2},
+            boxed title style={
+            rounded corners,
+            boxrule=1pt,
+            arc=0.5mm,
+            top=0.5mm,
+            bottom=0.5mm,
+            colframe=gramlightblue!75!black,
+            colback=gramlightblue!5!white},
+            fonttitle=\monts\bfseries\color{gramlightblue!50!black},
+            sharp corners}
+    %%%%%%%%%%%%%% Example %%%%%%%%%%%%%%%%%%%%%%%%
+%    \newtcolorbox[auto counter, number within=section]{example}{%
+%            enhanced,
+%            colback=grampink!15!white,
+%            colframe=grampink,
+%            colbacktitle=grampink!75!white,
+%           top=6mm,
+%           bottom=6mm,
+%           right=6mm,
+%            left=6mm,
+%            breakable,
+%            attach boxed title to top left={xshift=5mm,yshift=-1.5mm},
+%            title=  \large{Example~\thetcbcounter},
+%            boxed title style={
+%            rounded corners,
+%            boxrule=1pt,
+%            arc=0.5mm,
+%           top=0.5mm,
+%            bottom=0.5mm,
+%            colframe=grampink,
+%            colback=grampink!5!white},
+%           fonttitle=\bfseries\monts\color{grampink},
+%            sharp corners}
+            
+            
+  
+    
+      \newtcolorbox[auto counter, number within=section]{example}{%
+        parbox=false,
+        colback=grampink!15!white,
+        colframe=grampink,
+        colbacktitle=grampink!15!white,
+        enhanced,
+        boxrule=0mm,
+        leftrule=1mm,
+        rightrule=1mm,
+        toprule=1mm,
+        boxsep=0mm,
+        arc=0mm,
+        outer arc=0mm,
+        left=3mm,
+        right=3mm,
+        top=3mm,
+        bottom=3mm,
+        toptitle=1mm,
+        bottomtitle=1mm,
+        breakable,
+        title= \color{grampink}\monts\bfseries\large{Example~\thetcbcounter},
+        fontupper=\large\bfseries\color{black}, fontlower=\large\bfseries\color{black}
+    }
+ 
+    %%%%%%%%%%%%% Some Box  %%%%%%%%%%%%%%%%%%%
+   
+      \newtcolorbox[auto counter, number within=section]{notebox}[1]{%
+        parbox=false,
+        colback=gramdark!5!white,
+        colframe=gramdark,
+        colbacktitle=gramdark!5!white,
+        enhanced,
+        boxrule=0mm,
+        leftrule=0.8mm,
+        rightrule=0.8mm,
+        toprule=0.8mm,
+        bottomrule=0.8mm,
+        boxsep=0mm,
+        arc=0mm,
+        outer arc=0mm,
+        left=3mm,
+        right=3mm,
+        top=1mm,
+        bottom=2mm,
+        toptitle=1mm,
+        bottomtitle=1mm,
+        breakable,
+        title= \color{gramdark}\monts\bfseries\large{#1}
+    }
+    %%%%%%%%%%%%%% Definition %%%%%%%%%%%%%%%%%%%%%%%%
+    %\newtcolorbox[auto counter, number within=section]{definition}[2][]{%
+%            enhanced,
+%            interior style={middle color=gramsky!60!white,
+%                            right color=gramsky!30!white,
+%                            left color=gramsky!30!white
+%            },
+%            colframe=gramsky!70!black,
+%            colbacktitle=gramsky!75!white,
+%            top=6mm,
+%            bottom=6mm,
+%            right=6mm,
+%            left=6mm,
+%            breakable,
+%            attach boxed title to top left={xshift=5mm,yshift=-1.5mm},
+%            title=  \large{\bfseries{Definition~\thetcbcounter:}}~\normalsize{#2},
+%            boxed title style={
+%            rounded corners,
+%            boxrule=1pt,
+%            arc=0.5mm,
+%            top=0.5mm,
+%            bottom=0.5mm,
+%            colframe=gramsky!75!black,
+%            colback=gramsky!5!white},
+%            fonttitle=\monts\color{gramsky!30!black},
+%            sharp corners}
+    
+    
+     \newtcolorbox[auto counter, number within=section]{definition}[2][]{%
+            enhanced,
+            parbox=false,
+        colback=gramsky!5!white,
+        colframe=gramsky,
+        colbacktitle=gramsky!5!white,
+        enhanced,
+        boxrule=0mm,
+        leftrule=0.8mm,
+        rightrule=0.8mm,
+        toprule=0.8mm,
+        bottomrule=0.8mm,
+        boxsep=0mm,
+        arc=0mm,
+        outer arc=0mm,
+        left=4mm,
+        right=4mm,
+        top=3mm,
+        bottom=3mm,
+        toptitle=2mm,
+        bottomtitle=1mm,
+        breakable,
+        title= \color{gramsky!85!black}\monts\bfseries\large{Definition~\thetcbcounter}}
+    
+    %%%%%%%%%%%%%%%%%   Warning Box   %%%%%%%%%%%%%%%%%%%
+    \newtcolorbox[auto counter,number within=section]{warning}[1][]{
+      enhanced jigsaw,colback=gramred!5!white,colframe=gramred!50!red,coltitle=gramred!50!red,
+      fonttitle=\bfseries\monts,
+      sharp corners,
+      detach title,
+      leftrule=18mm,
+      underlay unbroken and first={\node[below,text=black,anchor=east]
+      at ([xshift=-8.5pt]interior.base west) {\Huge  \textbf{\faExclamationTriangle}};},
+      breakable,pad at break=1mm,
+      title=\large{Warning},
+      code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+    }
+    
+    \BeforeBeginEnvironment{warning}{\savenotes}
+\AfterEndEnvironment{warning}{\spewnotes}
+
+    %%%%%%%%%% Tip %%%%%%%%%%%%%%%%%%%%
+    
+    \newtcolorbox[auto counter,number within=section]{tip}[1][]{
+      enhanced jigsaw,colback=gramgreen!5!white,colframe=gramgreen,coltitle=gramgreen!80!black,
+      fonttitle=\bfseries\monts,
+      sharp corners,
+      detach title,
+      leftrule=18mm,
+      % What you need %%%%%%%%%%%%
+      underlay unbroken and first={\node[below,text=black,anchor=east]
+      at ([xshift=-10.5pt]interior.base west) {\Huge\textbf{\faInfoCircle}};},
+      %%%%%%%%%%%%%%%%%%%%%%%
+      breakable,pad at break=1mm,
+      title=\large{Tip},
+      code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+    }
+    \BeforeBeginEnvironment{tip}{\savenotes}
+\AfterEndEnvironment{tip}{\spewnotes}
+
+    %%%%%%%%%%%%% Hint Box %%%%%%%%%%%%%%%%%%%%
+    
+    \newtcolorbox[auto counter,number within=section]{hint}[1][]{
+      enhanced jigsaw,colback=gramyellow!5!white,colframe=gramyellow,coltitle=gramyellow,
+      fonttitle=\bfseries\monts,
+      sharp corners,
+      detach title,
+      leftrule=18mm,
+      underlay unbroken and first={\node[below,text=black,anchor=east]
+      at ([xshift=-14.8pt]interior.base west) {\Huge\textbf{\faLightbulbO
+    }};},
+      breakable,pad at break=1mm,
+      title=\large{Hint},
+      code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+    }
+    \BeforeBeginEnvironment{hint}{\savenotes}
+\AfterEndEnvironment{hint}{\spewnotes}
+
+    %%%%%%%%%%%%%%%%%  Exercise Box   %%%%%%%%%%%%%%%%%%%
+    \newtcolorbox[auto counter,number within=section]{exercise}[1][]{
+      enhanced jigsaw,colback=gramlime!5!white,colframe=gramlime!80!black,coltitle=gramlime!80!black,
+      fonttitle=\bfseries\monts,
+      sharp corners,
+      detach title,
+      leftrule=18mm,
+      underlay unbroken and first={\node[below,text=black,anchor=east]
+      at ([xshift=-10.5pt]interior.base west) {\Huge  \textbf{\faQuestionCircleO}};},
+      breakable,pad at break=1mm,
+      title=\large{Exercise~\thetcbcounter},
+      code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+    }
+    \BeforeBeginEnvironment{exercise}{\savenotes}
+\AfterEndEnvironment{exercise}{\spewnotes}
+
+    %%%%%%%%%%%%%%%%%  Remark Box   %%%%%%%%%%%%%%%%%%%
+    \newtcolorbox[auto counter,number within=section]{remark}[1][]{
+      enhanced jigsaw,colback=grampeach!5!white,colframe=grampeach,coltitle=grampeach,
+      fonttitle=\bfseries\monts,
+      sharp corners,
+      detach title,
+      leftrule=18mm,
+      underlay unbroken and first={\node[below,text=black,anchor=east]
+      at ([xshift=-7.5pt]interior.base west) {\Huge  \textbf{\faEdit}};},
+      breakable,pad at break=1mm,
+      title=\large{Remark~\thetcbcounter},
+      code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+    }
+    \BeforeBeginEnvironment{remark}{\savenotes}
+\AfterEndEnvironment{remark}{\spewnotes}
+    %%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%
+    \newcounter{problem}
+    \newtcolorbox[auto counter]{problem}{
+    enhanced,
+     breakable,
+    boxrule=0pt,frame hidden,
+    borderline west={4pt}{0pt}{fizikablack},
+    borderline east={4pt}{0pt}{fizikablack},
+    colback=fizikablack!10!white,
+    sharp corners,
+    title={Problem~\thetcbcounter},
+    fonttitle=\large\bfseries\color{fizikawhite}\monts,
+    colbacktitle=fizikablack,
+    }
+
+    \newcounter{solution}
+    \newtcolorbox[auto counter]{solution}{
+    enhanced,
+    breakable,
+    boxrule=0pt,frame hidden,
+    borderline west={4pt}{0pt}{fizikablack},
+    borderline east={4pt}{0pt}{fizikablack},
+    colback=fizikablack!10!white,
+    sharp corners,
+    title={Solution~\thetcbcounter},
+    fonttitle=\large\bfseries\color{fizikawhite}\monts,
+    colbacktitle=fizikablack,
+    attach boxed title to bottom
+    }
+
+    \BeforeBeginEnvironment{problem}{\savenotes}
+\AfterEndEnvironment{problem}{\spewnotes}
+    
+  
+    
+    
+    
+    
+    
+    
+    %%%%%%%%%%%%%    Table Of Contents   %%%%%%%%%%%%%%
+    
+    \newtcolorbox{toc}{colback=myblue!5!white,
+                colframe=myblue,fonttitle=\texgyrebonum\Large\monts\color{black},
+                colbacktitle=myblue!15!white,enhanced,
+                arc=0.3mm,
+                breakable,
+                top=8mm,
+                bottom=8mm,
+                right=6mm,
+                left=6mm,
+    attach boxed title to top center=
+    {yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+    boxed title style={boxrule=0.5mm,
+    frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+    -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+    -- (frame.south east) -- (frame.south west) -- cycle; },
+    interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+    -- (interior.north west) -- (interior.north east)
+    -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+    -- cycle;} }
+    ,
+    title=Table Of Contents}
+    
+    
+    
+    
+    
