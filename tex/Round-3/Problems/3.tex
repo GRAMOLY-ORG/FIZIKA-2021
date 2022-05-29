@@ -1,0 +1,87 @@
+
+\section*{Problem 3}
+\begin{problem}{}
+We have a thin, homogeneous knife of mass density $\mu$, total mass $M$ and length $L$, which is at rest in a horizontal position. This knife is deformed and a vibration ensues. 
+\end{problem}
+\begin{problem}{A. Analysis using a Discontinuous model}
+
+Say the knife consists of $N$ segments each of length $\delta$ and mass $\mu \delta$. Let us denote the center of a segment $i$ by $A_i$ and $p_i$ the deviation of $A_i$ from the equilibrium position along the vertical. Also, assume that this deformation is "weak" so we can safely take the angle made by each segment with horizontal to be small. Under these imposed conditions, we can hypothesise that each segment has a fixed length ($\delta$), equal to horizontal projection of deformation. 
+\newline
+You may find the following information useful. The elastic energy per unit length of a knife which is bent can be expressed as $YI/2R_0^2$. Where $Y$ is the Young's modulus,  $R_0$ is the radius of curvature at the point. I is the so-called "elastic moment of inertia" equal to $st^2/12$, where $s$ is the cross-sectional area and $t$ is the thickness.
+\newline
+Note that, the knife oscillates so fast the oscillations can be assumed adiabatic. Also, for simplicity we ignore the effects of gravity.
+\begin{center}
+    
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,326); %set diagram left start at 0, and has height of 326
+
+%Straight Lines [id:da1995799735246373] 
+\draw    (226.02,269.45) -- (319.77,15.7) -- (408.02,271.45) ;
+%Straight Lines [id:da35387501051363746] 
+\draw    (60.02,227.45) -- (573.02,227.45) ;
+%Curve Lines [id:da16552534879846426] 
+\draw    (60.02,227.45) .. controls (95.02,222.45) and (154.27,234.65) .. (226.02,269.45) .. controls (297.76,304.24) and (333.76,302.24) .. (408.02,271.45) .. controls (482.27,240.65) and (591.83,203.08) .. (602.02,195.45) ;
+%Shape: Arc [id:dp2436095842082937] 
+\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (572.39,26.51) .. controls (529.95,185.14) and (429.82,296.19) .. (314.98,294.2) .. controls (201.66,292.24) and (106.45,180.77) .. (68.47,24.07) -- (322.4,-135.16) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (572.39,26.51) .. controls (529.95,185.14) and (429.82,296.19) .. (314.98,294.2) .. controls (201.66,292.24) and (106.45,180.77) .. (68.47,24.07) ;
+%Straight Lines [id:da5109190450920182] 
+\draw    (319.77,15.7) -- (319.77,294.7) ;
+%Straight Lines [id:da3338408367133925] 
+\draw    (226.02,269.45) -- (226.02,226.78) ;
+%Straight Lines [id:da12388477104015738] 
+\draw    (408.02,271.45) -- (408.02,227.78) ;
+
+%Shape: Rectangle [id:dp2312757309176401] 
+\draw  [fill={rgb, 255:red, 5; green, 5; blue, 5 }  ,fill opacity=1 ] (32.98,221.85) -- (102.98,221.85) -- (102.98,237.84) -- (32.98,237.84) -- cycle ;
+
+% Text Node
+\draw (187.02,155.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$i-1$};
+% Text Node
+\draw (413.02,161.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$i+1$};
+% Text Node
+\draw (357.02,59.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$R$};
+% Text Node
+\draw (198.02,279.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$A_{i-1}$};
+% Text Node
+\draw (409.02,280.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$A_{i+1}$};
+% Text Node
+\draw (328.52,242.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$q_{i}( t)$};
+% Text Node
+\draw (303.02,187.85) node [anchor=north west][inner sep=0.75pt]  [font=\large]  {$i$};
+
+
+\end{tikzpicture}
+\end{center}
+\end{problem}
+\begin{subpr}{A1. \hfill 0.2 pts.} Find the expression of the knife's kinetic energy.
+\end{subpr}
+\begin{subpr}{A2. \hfill 0.3 pts.} Find an approximate expression of $R_i$, the radius of circle passing through $A_{i-1}$, $A_i$, $A_{i+1}$ in terms of the coordinates $p_{i-1}$, $p_i$, $p_{i+1}$
+\end{subpr}
+
+\begin{subpr}{A3. \hfill 0.3 pts.} Calculate the potential energy of the knife, neglecting any border effects.
+\end{subpr}
+\begin{subpr}{A4. \hfill 0.2 pts.} Write the Lagrangian of the knife and write the Euler Lagrange equations. 
+\end{subpr}
+
+\begin{problem}{Extending this analysis to continuous Limits}
+
+Let $\Phi(x,t)$ be an interpolation function of the knife satisfying the condition $\Phi(i \delta, t)=p_i(t) \  \forall \ A_i$. Solve the remainder of the problem in the limit that $N \to \infty$, $\delta \to 0$ and $N\delta=L$
+\end{problem}
+
+\begin{subpr}{B1. \hfill 2 pts.}
+Find a partial differential equation that is satisfied by $\Phi(x,t)$.
+\end{subpr}
+
+\begin{subpr}{B2. \hfill 3 pts.} What are the angular frequencies of the knife's oscillations. \newline
+Find solutions of the form $\Phi(x,t)=e^{-i\omega t}\Psi(x)$. Assume the following boundary conditions, the knife is fixed at one end, the other end is free, infinite radius of curvature i.e 0 second and third derivative.
+\end{subpr}
+\begin{subpr}{B3. \hfill 0.2 pts.} Give a reasonable estimate of the fundamental frequency of oscillations of a 1m long stainless steel knife of 3.5 mm thickness. Density of Steel $7850 kg/m^3$. Youngs modulus of steel $2.1*10^{11} Pa$
+\end{subpr}
+\begin{subpr}{B4. \hfill 2.4 pts.}  Calculate the Lagrangian density for the system.
+\end{subpr}
+\begin{subpr}{B5. \hfill 1.4 pts.} Using the Euler Lagrange equations recover the wave equation we got before.
+\end{subpr}
+
+\clearpage
