@@ -1,0 +1,136 @@
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}             
+\usepackage[utf8]{inputenc}
+\usepackage{tgpagella}
+\usepackage{amsthm, amssymb, amsmath}
+\usepackage{tikz,lipsum,lmodern}   
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{physics}                    
+\usepackage{cancel}           
+\usepackage{varwidth}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage{fontawesome}
+\usepackage{paralist}
+\usepackage{mathpazo}
+\usepackage{parskip}
+\usepackage{epigraph}
+\usepackage{ulem}
+\usepackage{fvextra}
+\usepackage{csquotes}
+\usepackage{rotating}
+\usepackage{relsize}  
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{titlesec}
+\titleformat{\section}
+{\fontfamily{qag}\selectfont\huge\bfseries}{\thesection}{1em}{}
+\usepackage{geometry}
+\geometry{
+a4paper,
+margin=10mm,
+top=1cm,
+bottom=18mm,
+left=15mm,
+right=15mm,
+includeheadfoot,
+headsep=1cm,
+footskip=1.0cm
+}
+
+
+\definecolor{myorg}{HTML}{FF5F1F}
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\includegraphics[width=1.3cm]{Images/gramoly.png}}
+\lhead{\includegraphics[width=1.5cm]{Images/fizika.png}}
+
+\fancyhead[C]{\Large\bfseries{\fontfamily{qag}\selectfont
+ GRAMOLY - FIZIKA Round III \vspace*{3mm}}}
+\rfoot{Page \thepage}
+
+\setlength{\headheight}{52pt}% ...at least 51.60004pt
+
+
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    %%%%%%%%%%%%%%%%%%%%%    Hyperref   %%%%%%%%%%%%%%%%%%%%%
+    %   %   %   %   %   %   %   %   %   %   %   %   %   %   %
+    \usepackage{blindtext}
+    \usepackage{hyperref}
+    \RequirePackage{hyperref}
+    \makeatletter
+    \AtBeginDocument{
+    \hypersetup{
+        linkcolor=red,
+        filecolor=red,      
+        urlcolor=red,
+        citecolor = red,
+        anchorcolor = red,
+        pdftitle={\@title},
+        pdfauthor={\@author},
+        }}
+    \makeatother
+    \urlstyle{same}
+    
+\usepackage[many]{tcolorbox}
+    \tcbuselibrary{theorems}
+    \tcbuselibrary{skins,xparse,listings}
+    \tcbuselibrary{breakable} % Use this in every box 
+    \usetikzlibrary{shadows}
+    
+    %%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%   
+    \usepackage[many]{tcolorbox}
+    \tcbuselibrary{theorems}
+    \tcbuselibrary{skins,xparse,minted,listings}
+    \tcbuselibrary{breakable} % Use this in every box 
+    \usetikzlibrary{shadows}
+    
+    %%%%%%%%%%%% Problem %%%%%%%%%%%%%%%%%%
+    %\newcounter{problem}
+    \newcounter{problem}
+    \newtcolorbox[use counter=problem]{problem}[1]{
+    enhanced,
+    breakable,
+    boxrule=0pt,frame hidden,
+    % borderline west={4pt}{0pt}{gramyellow},
+    colback=black!5!white,
+    sharp corners,
+    title={#1},
+    fonttitle=\large\mdseries\bfseries\fontfamily{qag}\selectfont\color{white!5!black},
+    colbacktitle=black!5!white,
+    }
+   %\newcounter{problem}
+      \newtcolorbox[auto counter, number within=section]{subpr}[1]{%
+        enhanced,
+        parbox=false,
+        colback=white,
+        colframe=black,
+        colbacktitle=white,
+        enhanced,
+        boxrule=0mm,
+        leftrule=0.3mm,
+        rightrule=0.3mm,
+        toprule=0.3mm,
+        bottomrule=0.3mm,
+        boxsep=0mm,
+        arc=0mm,
+        outer arc=0mm,
+        left=4mm,
+        right=4mm,
+        top=3mm,
+        bottom=3mm,
+        toptitle=2mm,
+        bottomtitle=1mm,
+        breakable,
+        title={#1},
+        fonttitle=\color{black}\fontfamily{qag}\selectfont\large\bfseries}
+      
